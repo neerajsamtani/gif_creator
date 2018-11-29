@@ -12,18 +12,19 @@ def self_path():
         path = '.'
     return path
 
-# change this later
+# Get start and end numbers
 start = int(sys.argv[1])
 end = int(sys.argv[2]) + 1
 
-# Set the variables to the approproate folders
+# Set the variables to the appropriate folders
 current_folder = self_path()
 A = os.path.join(current_folder, 'Images', 'A')
 B = os.path.join(current_folder, 'Images', 'B')
 C = os.path.join(current_folder, 'Images', 'C')
 D = os.path.join(current_folder, 'Images', 'D')
 
-def runScript(nstart, nend):
+# Create gifs
+def create_gifs(nstart, nend):
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Completed 0 of " + str(end-1))
     for i in range(nstart,nend):
@@ -35,8 +36,7 @@ def runScript(nstart, nend):
                     os.path.join(C, imagename),
                     os.path.join(D, imagename),
                     os.path.join(C, imagename),
-                    os.path.join(B, imagename),
-                    os.path.join(A, imagename)]
+                    os.path.join(B, imagename)]
 
         images = []
         for filename in filenames:
@@ -45,8 +45,7 @@ def runScript(nstart, nend):
         os.system('cls' if os.name == 'nt' else 'clear')
         print("Completed " + str(i) + " of " + str(end-1))
 
-runScript(start, end)
+create_gifs(start, end)
 
 print("--- %s seconds ---" % (time.time() - start_time))
 k = input("press enter to exit") 
-
