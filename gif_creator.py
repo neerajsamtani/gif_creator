@@ -21,9 +21,11 @@ D = os.path.join(current_folder, 'Images', 'D')
 
 # If an argument is not specified, assume the name of the image is "IMG_0001.jpg"
 if(len(sys.argv) > 1):
-	imagename = sys.argv[1]
+	imagename = sys.argv[1] + ".jpg"
+	gifname = sys.argv[1] + ".gif"
 else:
 	imagename = "IMG_0001.jpg"
+	gifname = "IMG_0001.gif"
 
 filenames = [os.path.join(A, imagename), 
 			os.path.join(B, imagename),
@@ -36,7 +38,7 @@ filenames = [os.path.join(A, imagename),
 images = []
 for filename in filenames:
     images.append(imageio.imread(filename))
-imageio.mimsave(os.path.join(current_folder, 'Images', 'Gifs', 'IMG_0001.gif'), images, duration = 0.2)
+imageio.mimsave(os.path.join(current_folder, 'Images', 'Gifs', gifname), images, duration = 0.2)
 
 print("--- %s seconds ---" % (time.time() - start_time))
 k = input("press enter to exit") 
