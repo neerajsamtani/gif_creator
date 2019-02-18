@@ -47,7 +47,9 @@ gif_creator
 ```
 
 When you double click on the script, enter the starting and ending image names for which you want to create gifs. The script will match all the IMG_0001.JPG's in each folder and create a gif from them, then match all the IMG_0002.JPG's in each folder and create a gif from them, and so on. 
+
 For example, if I had 70 images which were named IMG_0004.JPG, IMG_0005.JPG, .... IMG_0074.JPG , I would enter `4 74` when prompted in the command line and then hit *Enter*. 
+
 A folder *Gifs* will appear under the *Images* folder with all the gifs in it.
 
 That's it!
