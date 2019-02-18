@@ -10,7 +10,7 @@ And then run
 $ python get-pip.py
 ```
 
-Once you install 'pip', we can install our dependencies:
+Once you install 'pip', we can install our dependencies. You might already have some of these, like `numpy`.
 
 ```
 $ pip install imageio
